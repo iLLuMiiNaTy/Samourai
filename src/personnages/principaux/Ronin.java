@@ -4,16 +4,17 @@ import personnages.Humain;
 
 public class Ronin extends Humain{
 	
-	private int honneur = 1;
+	protected int honneur = 1;
 
 	public Ronin(String nom, int argent, String boisson) {
 		super(nom, argent, boisson);
 	}
 	
 	
-	public void donner(int montant, Commercant c) {
-		c.gagnerArgent(montant);
+	public void donner(int montant, Humain h) {
+		h.gagnerArgent(montant);
 		this.perdreArgent(montant);
+		this.parler("Je viens de donner " + montant + " pièces à " + h.getNom());
 	}
 	
 	
@@ -24,9 +25,12 @@ public class Ronin extends Humain{
 			this.honneur+=1;
 			this.parler("J'ai gagné!");
 		}
-		y.gagnerDuel();
-		this.honneur -= 1;
-		this.parler("J'ai perdu...");
+		else {
+			y.gagnerDuel();
+			this.honneur -= 1;
+			this.parler("J'ai perdu...");
+		}
+		
 	}
 
 	

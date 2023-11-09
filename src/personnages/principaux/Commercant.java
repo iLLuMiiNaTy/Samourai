@@ -6,8 +6,9 @@ public class Commercant extends Humain{
 	
 	public Commercant(String nom, int argent) {
 		super(nom, argent, "thé");
-		// TODO Auto-generated constructor stub
 	}
+	
+	
 	
 	public int seFaireExtorquer () {
 		this.perdreArgent(this.getArgent());
@@ -18,5 +19,7 @@ public class Commercant extends Humain{
 	public void recevoir (int argent) {
 		this.gagnerArgent(argent);
 	}
+	
+	
 
 }

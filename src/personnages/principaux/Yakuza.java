@@ -54,6 +54,12 @@ public class Yakuza extends Humain{
 		this.parler("J'ai perdu...");
 	}
 	
+	@Override
+	public void direBonjour() {
+		super.direBonjour();
+		this.parler(" Je suis membre du " + this.clan);
+	}
+	
 	
 	
 

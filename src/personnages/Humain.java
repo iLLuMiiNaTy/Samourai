@@ -25,7 +25,7 @@ public class Humain {
 	}
 	
 	
-	public void boire (String nom, String boisson) {
+	public void boire () {
 		String texte =  "Mmmm, un bon verre de " + this.boisson + " ! GLOUPS !";
 		this.parler(texte);
 	}
