@@ -27,7 +27,7 @@ public class Humain {
 	
 	public void boire (String nom, String boisson) {
 		String texte =  "Mmmm, un bon verre de " + this.boisson + " ! GLOUPS !";
-		this.parler(this.nom, texte);
+		this.parler(texte);
 	}
 
 
@@ -69,7 +69,7 @@ public class Humain {
 	
 	public void perdreArgent(int montant) {
 		if (this.argent <=0){
-			parler (this.nom, "J'ai les poches vides");
+			this.parler ("J'ai les poches vides");
 		}
 		this.argent -= montant;
 	}

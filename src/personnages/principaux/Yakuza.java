@@ -43,19 +43,15 @@ public class Yakuza extends Humain{
 	
 	
 	public void gagnerDuel() {
-		
+		this.reputation += 1;
+		this.parler("J'ai gagné !");
 	}
 	
 	
-	public int perdreDuel() {
+	public void perdreDuel() {
 		this.argent = 0;
 		this.reputation -= 1;
 		this.parler("J'ai perdu...");
-	}
-	
-	public void direBonjour() {
-		this.reputation += 1;
-		this.parler(J'ai gagné !);
 	}
 	
 	
